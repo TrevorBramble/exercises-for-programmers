@@ -1,6 +1,6 @@
 # Saying Hello
 
- [X] Ruby
+ [X] [Ruby](ruby/)
 
 ## Problem Statement
 
