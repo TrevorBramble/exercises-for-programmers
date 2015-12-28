@@ -9,9 +9,7 @@ number = gets.chomp
 number = "0" + number if number.length == 1
 
 puts "Exercise name?"
-name = gets.chomp
-
-name.downcase.gsub!(' ', '-')
+name = gets.chomp.downcase.gsub(' ', '-')
 
 directory = "./" + number + "-" + name
 
