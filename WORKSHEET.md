@@ -1,6 +1,7 @@
 # Exercise Name
 
- [ ] Language
+ * [ ] Language
+
 
 ## Problem Statement
 
@@ -10,6 +11,7 @@
 
 ```
 ```
+
 
 ## Constraints
 
@@ -43,4 +45,5 @@ Expected result:
 
 ## Pseudocode
 
-
+```
+```
