@@ -21,9 +21,9 @@ per language.
 
 ## The Exercises
 
- 1. [Saying Hello](01-saying-hello/README.md)
- 2. [Counting the Number of Characters](02-counting-the-number-of-characters/README.md)
- 3. Printing Quotes
+ 1. [Saying Hello](01-saying-hello/)
+ 2. [Counting the Number of Characters](02-counting-the-number-of-characters/)
+ 3. [Printing Quotes](03-printing-quotes/)
  4. Mad Lib
  5. Simple Math
  6. Retirement Calculator
