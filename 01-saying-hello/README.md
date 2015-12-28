@@ -18,6 +18,10 @@ Hello, Brian, nice to meet you!
 
  * Keep the input, string concatenation, and output separate.
 
+
+## Analysis
+
+
 ### Inputs: 
 
  * name
