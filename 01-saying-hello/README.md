@@ -42,11 +42,11 @@ Hello, Brian, nice to meet you!
 
 Input:
 
-`  `name: Brian
+  * name: Brian
 
 Expected result:
 
-`  `greeting: Hello, Brian, nice to meet you!
+  * greeting: Hello, Brian, nice to meet you!
 
 
 ## Pseudocode
