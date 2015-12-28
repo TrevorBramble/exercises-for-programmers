@@ -22,7 +22,7 @@ per language.
 ## The Exercises
 
  1. [Saying Hello](01-saying-hello/README.md)
- 2. Counting the Number of Characters
+ 2. [Counting the Number of Characters](02-counting-the-number-of-characters/README.md)
  3. Printing Quotes
  4. Mad Lib
  5. Simple Math
