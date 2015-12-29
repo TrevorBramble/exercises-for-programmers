@@ -24,7 +24,7 @@ per language.
  1. [Saying Hello](01-saying-hello/)
  2. [Counting the Number of Characters](02-counting-the-number-of-characters/)
  3. [Printing Quotes](03-printing-quotes/)
- 4. Mad Lib
+ 4. [Mad Lib](04-mad-lib/)
  5. Simple Math
  6. Retirement Calculator
  7. Area of a Rectangular Room
