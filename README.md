@@ -25,7 +25,7 @@ per language.
  2. [Counting the Number of Characters](02-counting-the-number-of-characters/)
  3. [Printing Quotes](03-printing-quotes/)
  4. [Mad Lib](04-mad-lib/)
- 5. Simple Math
+ 5. [Simple Math](05-simple-math/)
  6. Retirement Calculator
  7. Area of a Rectangular Room
  8. Pizza Party
