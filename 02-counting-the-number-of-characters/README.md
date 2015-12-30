@@ -1,6 +1,7 @@
 # Counting the Number of Characters
 
  * [x] [Ruby](ruby/)
+ * [x] [Go](go/)
 
 
 ## Problem Statement
