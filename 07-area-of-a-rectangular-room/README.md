@@ -53,8 +53,12 @@ The area is
 ## Test Plan
 
 Input:
+ * length: 15
+ * width: 20
 
 Expected result:
+ * area in feet: 300
+ * area in meters: 27.871
 
 
 ## Pseudocode
