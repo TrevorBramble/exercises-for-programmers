@@ -1,6 +1,7 @@
 # Exercise Name
 
  * [x] [Ruby](ruby/)
+ * [x] [Go](go/) (w/ caveat)
 
 
 ## Problem Statement
