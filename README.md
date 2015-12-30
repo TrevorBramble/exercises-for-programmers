@@ -1,11 +1,13 @@
 # Exercises for Programmers
-Solutions for Brian Hogan's book, Exercises for Programmers
+Solutions for [Exercises for
+Programmers](https://pragprog.com/book/bhwb/exercises-for-programmers), by
+[Brian Hogan](//github.com/napcs)
 
 ## Plan
 
 I'm going to implement the solution to each exercise in a handful of languages.
-Largely I hope to cover the exercises with Ruby, Go, Python, and Elm. Possibly
-Haskell, Rust, or C occasionally. But those are stretch goals.
+Largely I hope to cover the exercises with Ruby and Go, and later Haskell,
+Python, Elm, Rust, or C.
 
 Each exercise has a few "challenges" appended, elaborating on the original
 problem. I'm going to ignore this on the first run through, then revisit them
