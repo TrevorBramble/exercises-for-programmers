@@ -1,6 +1,7 @@
 # Saying Hello
 
  * [x] [Ruby](ruby/)
+ * [x] [Go](go/)
 
 
 ## Problem Statement
