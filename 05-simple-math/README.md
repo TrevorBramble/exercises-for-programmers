@@ -1,6 +1,7 @@
 # Simple Math
 
  * [x] [Ruby](ruby/)
+ * [x] [Go](go/)
 
 
 ## Problem Statement
