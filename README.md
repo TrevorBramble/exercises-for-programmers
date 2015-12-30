@@ -19,6 +19,40 @@ repository including a README to document the problem and related details.
 Within each exercise directory will be sub-directories enclosing solutions, one
 per language.
 
+## Running the Solutions
+
+How to execute the implemented solutions will depend on each language, among
+other things.
+
+### Ruby
+
+All solutions were written with Ruby 2.2.3 (MRI/CRuby). With a compatible Ruby
+installed they should all be executable in the usual fashion, by passing the
+file name to the interpreter.
+
+```
+$ ruby solution.rb
+```
+Additionally, all of the Ruby solutions have a "shebang" (`#!`) specified, so
+you may be able to execute them directly, depending.
+
+```
+$ ./solution.rb
+```
+### Go
+
+All solutions in Go are written against 1.5.2. They can be built or run as-is
+in the given directory, if you have the Go platform installed.
+
+```
+$ go build main.go
+$ ./main
+```
+```
+$ go run main.go
+```
+
+
 ## The Exercises
 
  1. [Saying Hello](01-saying-hello/)
