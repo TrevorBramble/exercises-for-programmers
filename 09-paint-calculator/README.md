@@ -1,6 +1,7 @@
 # Paint Calculator
 
  * [x] [Ruby](ruby/)
+ * [x] [Go](go/)
 
 
 ## Problem Statement
