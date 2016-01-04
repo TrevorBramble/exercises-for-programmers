@@ -65,7 +65,7 @@ $ go run main.go
  6. [Retirement Calculator](06-retirement-calculator/)
  7. [Area of a Rectangular Room](07-area-of-a-rectangular-room/)
  8. [Pizza Party](08-pizza-party/)
- 9. Paint Calculator
+ 9. [Paint Calculator](09-paint-calculator/)
  10. Self-Checkout
  11. Currency Conversion
  12. Computing Simple Interest
