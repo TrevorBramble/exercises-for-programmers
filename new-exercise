@@ -1,0 +1,58 @@
+#!/usr/bin/env ruby
+
+#TODO: modify project README to link new exercise
+
+class ExerciseCreator
+  README_TEMPLATE = File.join(Dir.pwd, 'WORKSHEET.md')
+
+  def self.call
+    new
+      .make_exercise_root_dir
+      .make_exercise_ruby_dir
+      .copy_readme_template
+  end
+
+  def make_exercise_root_dir(path = directory_path)
+    Dir.mkdir(path) unless Dir.exist?(path)
+
+    self
+  end
+
+  def make_exercise_ruby_dir(path = File.join(directory_path, 'ruby'))
+    Dir.mkdir(path) unless Dir.exist?(path)
+
+    self
+  end
+
+  def copy_readme_template(path = File.join(directory_path, 'README.md'))
+    File.write(path, IO.read(README_TEMPLATE).sub('Exercise Name', chapter_name))
+
+    self
+  end
+
+  private
+
+  def directory_path
+    @directory_path ||= File.join(Dir.pwd, directory_name)
+  end
+
+  def directory_name
+    @directory_name ||= "#{chapter_number.rjust(2, '0')}-#{chapter_name}"
+  end
+
+  def chapter_number
+    @chapter_number ||= ARGV.fetch(0) do |_i|
+      puts 'Exercise number?'
+      gets.chomp
+    end
+  end
+
+  def chapter_name
+    @chapter_name ||= ARGV.fetch(1) do |_i|
+      puts 'Exercise name?'
+      gets.chomp.downcase.gsub(' ', '-')
+    end
+  end
+end
+
+ExerciseCreator.call if $0 == __FILE__
