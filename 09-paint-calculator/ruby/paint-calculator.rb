@@ -8,13 +8,8 @@ length = gets.chomp.to_i
 print "What is the width of the room? "
 width = gets.chomp.to_i
 
-area = length * width
-
-if area < GALLON
-  gallons = 1
-else
-  gallons = (area.to_f / GALLON).ceil
-end
+area    = length * width
+gallons = area < GALLON ? 1 : (area.to_f / GALLON).ceil
 
 puts "You will need to purchase #{gallons} gallons of"
 puts "paint to cover #{area} square feet."
