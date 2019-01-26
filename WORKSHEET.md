@@ -1,6 +1,6 @@
 # Exercise Name
 
- * [ ] Language
+ * [ ] Ruby
 
 
 ## Problem Statement
@@ -15,15 +15,15 @@
 
 ## Constraints
 
- * 
+ *
 
 
 ## Analysis
 
 
-### Inputs: 
+### Inputs:
 
- * 
+ *
 
 
 ### Processes:
