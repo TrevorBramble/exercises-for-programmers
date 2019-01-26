@@ -1,23 +1,31 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+	"strings"
+)
 
 func main() {
-	var noun, verb, adjective, adverb string
-
-	fmt.Print("Enter a noun: ")
-	fmt.Scanln(&noun)
-
-	fmt.Print("Enter a verb: ")
-	fmt.Scanln(&verb)
-
-	fmt.Print("Enter an adjective: ")
-	fmt.Scanln(&adjective)
-
-	fmt.Print("Enter an adverb: ")
-	fmt.Scanln(&adverb)
-
 	fmt.Printf(
 		"Do you %s your %s %s %s? That's hilarious!\n",
-		verb, adjective, noun, adverb)
+		getInput("Enter a noun: "),
+		getInput("Enter a verb: "),
+		getInput("Enter an adjective: "),
+		getInput("Enter an adverb: "),
+	)
+}
+
+func getInput(prompt string) (input string) {
+	fmt.Print(prompt)
+
+	fmt.Scanln(&input)
+
+	input = strings.TrimSpace(input)
+	if input == "" {
+		fmt.Println("Missing input")
+		os.Exit(0)
+	}
+
+	return
 }

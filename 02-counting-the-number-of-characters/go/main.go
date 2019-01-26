@@ -1,13 +1,28 @@
 package main
 
-import "fmt"
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
 
 func main() {
-	var str string
+	reader := bufio.NewReader(os.Stdin)
 
 	fmt.Print("What is the input string? ")
 
-	fmt.Scanln(&str)
+	input, err := reader.ReadString('\n')
+	if err != nil {
+		fmt.Println("Error reading input")
+		os.Exit(0)
+	}
 
-	fmt.Printf("%s has %d characters.\n", str, len(str))
+	input = strings.TrimSpace(input)
+	if input == "" {
+		fmt.Println("Missing input")
+		os.Exit(0)
+	}
+
+	fmt.Printf("%s has %d characters.\n", input, len(input))
 }

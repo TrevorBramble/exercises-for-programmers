@@ -2,17 +2,13 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"time"
 )
 
 func main() {
-	var currentAge, retirementAge int
-
-	fmt.Print("What is your current age? ")
-	fmt.Scanln(&currentAge)
-
-	fmt.Print("At what age would you like to retire? ")
-	fmt.Scanln(&retirementAge)
+	currentAge := getNumber("What is your current age? ")
+	retirementAge := getNumber("At what age would you like to retire? ")
 
 	currentYear := time.Now().Year()
 
@@ -21,4 +17,17 @@ func main() {
 
 	fmt.Printf("You have %d years left until you can retire.\n", yearsRemaining)
 	fmt.Printf("It's %d, so you can retire in %d.\n", currentYear, retirementYear)
+}
+
+func getNumber(prompt string) (number int) {
+	fmt.Print(prompt)
+
+	fmt.Scanln(&number)
+
+	if number == 0 {
+		fmt.Println("Let's not use zero.")
+		os.Exit(0)
+	}
+
+	return
 }

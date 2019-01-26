@@ -1,17 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
 	const FeetToMetersFactor = 0.09290304
 
-	var length, width int
-
-	fmt.Print("What is the length of the room in feet? ")
-	fmt.Scanln(&length)
-
-	fmt.Print("What is the width of the room in feet? ")
-	fmt.Scanln(&width)
+	length := getNumber("What is the length of the room in feet? ")
+	width := getNumber("What is the width of the room in feet? ")
 
 	areaInFeet := length * width
 	areaInMeters := float64(areaInFeet) * FeetToMetersFactor
@@ -20,4 +18,17 @@ func main() {
 		length, width)
 	fmt.Printf("The area is\n%d square feet\n%.3f square meters\n",
 		areaInFeet, areaInMeters)
+}
+
+func getNumber(prompt string) (number int) {
+	fmt.Print(prompt)
+
+	fmt.Scanln(&number)
+
+	if number == 0 {
+		fmt.Println("Let's not use zero.")
+		os.Exit(0)
+	}
+
+	return
 }

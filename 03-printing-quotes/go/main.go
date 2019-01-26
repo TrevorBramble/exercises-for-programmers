@@ -1,24 +1,35 @@
 package main
 
-import "fmt"
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
 
-/*
- * This code is currently broken due to a bug or bugs in Go's fmt package.
- * For more details: https://github.com/golang/go/commit/dbaf5010b33e5819050ebb0a387eb0bff2cfb8bf
- *
- * There are other ways to do this and I might come back to do them, but I'm
- * too irked at the moment to bother.
- */
 func main() {
-	var quote, author string
+	reader := bufio.NewReader(os.Stdin)
 
-	fmt.Print("What is the quote? ")
+	quote := getInput("What is the quote? ", reader)
+	author := getInput("Who said it? ", reader)
 
-	fmt.Scanln(&quote)
+	fmt.Printf("%s says, \"%s\"\n", author, quote)
+}
 
-	fmt.Print("Who said it? ")
+func getInput(prompt string, reader *bufio.Reader) (input string) {
+	fmt.Print(prompt)
 
-	fmt.Scanln(&author)
+	input, err := reader.ReadString('\n')
+	if err != nil {
+		fmt.Println("Error reading input")
+		os.Exit(0)
+	}
 
-	fmt.Sprintf("%s says, \"%s\"\n", author, quote)
+	input = strings.TrimSpace(input)
+	if input == "" {
+		fmt.Println("Missing input")
+		os.Exit(0)
+	}
+
+	return
 }

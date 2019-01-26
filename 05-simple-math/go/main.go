@@ -1,23 +1,29 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
-	var firstNumber, secondNumber int
+	num1 := getNumber("What is the first number? ")
+	num2 := getNumber("What is the second number? ")
 
-	fmt.Print("What is the first number? ")
-	fmt.Scanln(&firstNumber)
+	fmt.Printf("%d + %d = %d\n", num1, num2, num1+num2)
+	fmt.Printf("%d - %d = %d\n", num1, num2, num1-num2)
+	fmt.Printf("%d * %d = %d\n", num1, num2, num1*num2)
+	fmt.Printf("%d / %d = %d\n", num1, num2, num1/num2)
+}
 
-	fmt.Print("What is the second number? ")
-	fmt.Scanln(&secondNumber)
+func getNumber(prompt string) (number int) {
+	fmt.Print(prompt)
 
-	sum := firstNumber + secondNumber
-	difference := firstNumber - secondNumber
-	product := firstNumber * secondNumber
-	quotient := firstNumber / secondNumber
+	fmt.Scanln(&number)
 
-	fmt.Printf("%d + %d = %d\n", firstNumber, secondNumber, sum)
-	fmt.Printf("%d - %d = %d\n", firstNumber, secondNumber, difference)
-	fmt.Printf("%d * %d = %d\n", firstNumber, secondNumber, product)
-	fmt.Printf("%d / %d = %d\n", firstNumber, secondNumber, quotient)
+	if number == 0 {
+		fmt.Println("Let's not use zero.")
+		os.Exit(0)
+	}
+
+	return
 }
